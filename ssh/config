@@ -1,0 +1,6 @@
+Host *
+    ServerAliveInterval 3
+    ServerAliveCountMax 20
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+    StrictHostKeyChecking no

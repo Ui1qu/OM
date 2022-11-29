@@ -1,0 +1,16 @@
+[user]
+	name = username
+	email = username@mail.com
+# [http]
+# 	postBuffer = 2M
+# 	proxy = socks5://127.0.0.1:8888
+# [https]
+#     proxy = socks5://127.0.0.1:8888
+[core]
+	quotePath = false
+	pager = more
+	autocrlf = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false

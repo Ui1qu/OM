@@ -1,0 +1,59 @@
+#!/usr/bin/env sh
+
+# add this next line to your .bashrc
+# [ -f $HOME/.myrc ] && source $HOME/.myrc
+
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+#
+# Misc :)
+alias less='less -r'             # raw control characters
+alias grep='grep --color'        # show differences in colour
+alias egrep='egrep --color=auto' # show differences in colour
+alias fgrep='fgrep --color=auto' # show differences in colour
+alias ls='ls --color=auto -h'
+alias ll='ls -l'
+alias gitd='git difftool'
+alias rlf='readlink -f'
+alias cls='clear'
+
+# PS1='[\u@\h \W]\$ '
+export EDITOR=vim
+
+proxyon() {
+    export http_proxy="http://IP:PORT"
+    export https_proxy="http://IP:PORT"
+}
+
+proxyoff() {
+    unset http_proxy
+    unset https_proxy
+}
+
+# Set PATH so it includes user's private bin if it exists
+if [ -d "${HOME}/.bin" ]; then
+    PATH="${HOME}/.bin:${PATH}"
+fi
+
+if [[ -n "${BASH_VERSION}" ]]; then
+    PROMPT_COMMAND=__prompt_command
+fi
+
+__prompt_command() {
+    local EXIT="$?"
+    local str="exit code "
+    if [ $EXIT != 0 ]; then
+        echo "$(tput setaf 1)"${str}$EXIT"$(tput sgr0)"
+    fi
+}
+
+if [ "$(command -v xdg-open)" ]; then
+    alias start="xdg-open"
+fi
+
+# bash上下键匹配历史
+if [[ $- == *i* ]]; then
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+fi
