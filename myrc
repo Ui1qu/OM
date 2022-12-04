@@ -49,6 +49,7 @@ if [[ -n "${BASH_VERSION}" ]]; then
     PROMPT_COMMAND=__prompt_command
 fi
 
+# shell命令行中执行完命令之后，如果非正常退出，显示状态码
 __prompt_command() {
     local EXIT="$?"
     local str="exit code "

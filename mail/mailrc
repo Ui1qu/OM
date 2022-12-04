@@ -1,0 +1,10 @@
+set from=address@mail.com(warning)          #设置发送邮件的邮箱和发邮件名称为warning
+set smtp=smtp.mail.com                      #设置smtp服务器地址
+set smtp-auth-user=address@mail.com         #设置邮箱账户
+set smtp-auth-password=password             #设置密码，为授权码
+set smtp-auth=login                         #SSL验证信息
+set smtp-use-starttls
+set ssl-verify=ignore
+
+# 该文件应该位于 $HOME/.mailrc
+
