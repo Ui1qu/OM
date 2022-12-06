@@ -1,0 +1,1 @@
+如果 `nginx.conf` 主配置文件中已经开启 include conf.d 下得文件，建议新建一个 `default.d` 文件夹，使用软链接形式添加到 `conf.d` 文件夹下。
