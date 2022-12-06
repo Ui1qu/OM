@@ -21,7 +21,7 @@ alias cls='clear'
 # PS1='[\u@\h \W]\$ '
 export EDITOR=vim
 LANG=zh_CN.UTF-8
-# vim 中打开文件取消注释下面行
+# vim 中打开文件乱码取消注释下面行
 # export LANG=C.UTF-8
 
 proxyon() {
