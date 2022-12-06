@@ -2,6 +2,7 @@
 " 显示设置 display
 syntax enable
 " set termguicolors
+set t_Co=256
 colorscheme pablo
 " 高亮当前行
 set cursorline
