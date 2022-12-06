@@ -20,7 +20,7 @@ curl -fsSL https://get.docker.com/ | sh
 
 if ! systemctl status docker >/dev/null 2>&1; then
    echo "$(tput setaf 1)"install docker failed"$(tput sgr0)"
-   
+   exit
 fi
 
 if [ ! -d "/etc/docker" ]; then
